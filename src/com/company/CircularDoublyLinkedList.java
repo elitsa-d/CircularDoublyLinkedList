@@ -41,6 +41,60 @@ public class CircularDoublyLinkedList {
         return currentNode;
     }
 
+    public void print() {
+        Node currentNode = this.head;
+        int current = 1;
+
+        while (current <= this.size) {
+            System.out.print(currentNode.getValue() + " ");
+            currentNode = currentNode.getNext();
+            current++;
+        }
+
+        System.out.println();
+    }
+
+    public void print(int times) {
+        Node currentNode = this.head;
+        int n = this.size * times;
+        int current = 1;
+
+        while (current <= n) {
+            System.out.print(currentNode.getValue() + " ");
+            currentNode = currentNode.getNext();
+            current++;
+        }
+
+        System.out.println();
+    }
+
+    public void printBackwards() {
+        Node currentNode = this.tail;
+        int current = 1;
+
+        while (current <= this.size) {
+            System.out.print(currentNode.getValue() + " ");
+            currentNode = currentNode.getPrev();
+            current++;
+        }
+
+        System.out.println();
+    }
+
+    public void printBackwards(int times) {
+        Node currentNode = this.tail;
+        int n = this.size * times;
+        int current = 1;
+
+        while (current <= n) {
+            System.out.print(currentNode.getValue() + " ");
+            currentNode = currentNode.getPrev();
+            current++;
+        }
+
+        System.out.println();
+    }
+
     public int getSize() {
         return this.size;
     }
