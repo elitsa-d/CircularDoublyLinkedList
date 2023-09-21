@@ -107,6 +107,22 @@ public class CircularDoublyLinkedList {
         return this.tail.getValue();
     }
 
+    public int getNthToLast(int n) {
+        if (n > this.size) {
+            throw new IndexOutOfBoundsException();
+        }
+
+        int current = 1;
+        Node currentNode = this.tail;
+
+        while (current < n) {
+            currentNode = currentNode.getPrev();
+            current++;
+        }
+
+        return currentNode.getValue();
+    }
+
     public int get(int index) {
         Node node = this.getNode(index);
         return node.getValue();
